@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Dark">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -16,13 +16,33 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignUpActivity"
+            android:name=".activities.SignUpActivity"
             android:label="@string/title_activity_sing_up"
-            android:parentActivityName=".LoginActivity"
+            android:parentActivityName=".activities.LoginActivity"
             android:theme="@style/AppTheme.Dark">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="pe.edu.upc.mivecindario.LoginActivity" />
+                android:value="pe.edu.upc.mivecindario.activities.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".activities.WallActivity"
+            android:label="@string/title_activity_wall"
+            android:parentActivityName=".activities.LoginActivity"
+            android:theme="@style/AppTheme.Dark">
+            <!--
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pe.edu.upc.mivecindario.activities.LoginActivity" />
+            -->
+        </activity>
+        <activity
+            android:name=".activities.PostActivity"
+            android:label="@string/title_activity_post"
+            android:parentActivityName=".activities.WallActivity"
+            android:theme="@style/AppTheme.Dark">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pe.edu.upc.mivecindario.activities.WallActivity" />
         </activity>
     </application>
 
